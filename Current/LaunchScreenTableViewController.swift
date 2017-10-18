@@ -108,6 +108,7 @@ class LaunchScreenTableViewController: UITableViewController {
         default:
             break
         }
+        //Some change
     
         //Remove the lines per cell
         self.tableView.separatorStyle = .none
