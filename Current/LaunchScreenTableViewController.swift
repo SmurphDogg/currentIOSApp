@@ -8,14 +8,14 @@
 
 import UIKit
 
-class LaunchScreenTableViewController: UITableViewController {
+class LaunchScreenTableViewController: UITableViewController { //Eventually we need to change to a view controller with a nested table view or size classes or something
 
     //size of the labels
         let c = [[150, 10, 300, 50], [150,14,300,30], [20,14,300,30], [20,14,300,30], [20,14,300,30], [20,14,300,30],]
         var usersLabel = UILabel()
   
     //In this cell array format we can inform what each section will be
-    let cellContent = ["Current", "Current.png", "username", "password", "stay logged in", "#of users"]
+    let cellContent = ["Current", "CurrentC.png", "username", "password", "stay logged in", "Create a Profile", "#of users"]
    
     
     override func viewDidLoad() {
@@ -72,7 +72,7 @@ class LaunchScreenTableViewController: UITableViewController {
             //create image
             myImage = createImage(imageName: cellContent[1] + ".png")
             myImageView = UIImageView(image: myImage)
-            myImageView.frame = CGRect(x: 150, y: 0, width: 100, height: 120)
+            myImageView.frame = CGRect(x: 100, y: 0, width: 300, height: 200)
             cell.addSubview(myImageView)
             break
         case 2:
@@ -97,10 +97,16 @@ class LaunchScreenTableViewController: UITableViewController {
 
             cell.addSubview(myView)
             break
-        
         case 5:
+            myButton = createButton(myText: cellContent[5], font: "Avenir", fontSize: 18, x: 0, y: 0, width: 100, height: 50)
+            myButton.setTitleColor(UIColor.black, for: .normal)
+            myButton.addTarget(self, action: #selector(rippleForUsers), for: .touchUpInside)
+            cell.addSubview(myButton)
+            
+            break
+        case 6:
             //create label
-            myLabel = createLabel(stringName: cellContent[5], x: 10, y: 0, width: 200, height: 50)
+            myLabel = createLabel(stringName: cellContent[6], x: 10, y: 0, width: 200, height: 50)
             usersLabel = myLabel
             myLabel.isHidden = true
             cell.addSubview(myLabel)
@@ -148,6 +154,10 @@ class LaunchScreenTableViewController: UITableViewController {
             
         case 5:
             height = 50
+            break
+        
+        case 6:
+                height = 50
             break
             
         default:
@@ -233,12 +243,14 @@ class LaunchScreenTableViewController: UITableViewController {
         button.frame = CGRect(x: x, y: y, width: width, height: height)
         button.titleLabel?.font = UIFont(name: font, size: CGFloat(fontSize))
         button.setTitle(myText, for: .normal)
+        button.setTitleColor(UIColor.green, for: .normal)
         return button
     }
     
     func createImage(imageName : String) -> UIImage{
          if let myImage = UIImage(named: imageName)
          {
+            
          return myImage
         }
         return UIImage(imageLiteralResourceName: "sonarPing.jpeg")
@@ -262,7 +274,7 @@ class LaunchScreenTableViewController: UITableViewController {
         let myTextField = UITextField(frame: CGRect(x: 20.0, y: 30.0, width: 100.0, height: 75.0))
         myTextField.backgroundColor = UIColor.clear
         myTextField.textColor = UIColor.black
-        myTextField.borderStyle = UITextBorderStyle.line
+        myTextField.borderStyle = UITextBorderStyle.bezel
         myTextField.placeholder = placeHolderText
         
         return myTextField
@@ -273,7 +285,7 @@ class LaunchScreenTableViewController: UITableViewController {
         let myTextField = UITextField(frame: CGRect(x: x, y: y, width: width, height: height))
         myTextField.backgroundColor = UIColor.clear
         myTextField.textColor = UIColor.black
-        myTextField.borderStyle = UITextBorderStyle.line
+        myTextField.borderStyle = UITextBorderStyle.bezel
         myTextField.placeholder = placeHolderText
         
         return myTextField
