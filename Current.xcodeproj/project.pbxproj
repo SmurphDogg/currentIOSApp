@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B46A98E1F99C256006A6E93 /* RipplePracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B46A98D1F99C256006A6E93 /* RipplePracticeViewController.swift */; };
+		9B46A9901F99C8BD006A6E93 /* CircleTransparentBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B46A98F1F99C8BD006A6E93 /* CircleTransparentBackground.png */; };
 		9B88ADF01F99C0C500B73F81 /* RippleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88ADEF1F99C0C500B73F81 /* RippleTableViewController.swift */; };
 		9B8C99621E5BE580007D142C /* sonarPing.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9B8C99611E5BE580007D142C /* sonarPing.jpeg */; };
 		9B8C99641E5BE776007D142C /* rsz_sonarping.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B8C99631E5BE776007D142C /* rsz_sonarping.jpg */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B46A98D1F99C256006A6E93 /* RipplePracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RipplePracticeViewController.swift; sourceTree = "<group>"; };
+		9B46A98F1F99C8BD006A6E93 /* CircleTransparentBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CircleTransparentBackground.png; sourceTree = "<group>"; };
 		9B88ADEF1F99C0C500B73F81 /* RippleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RippleTableViewController.swift; sourceTree = "<group>"; };
 		9B8C99611E5BE580007D142C /* sonarPing.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sonarPing.jpeg; path = ../../../Downloads/sonarPing.jpeg; sourceTree = "<group>"; };
 		9B8C99631E5BE776007D142C /* rsz_sonarping.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = rsz_sonarping.jpg; path = ../../../Downloads/rsz_sonarping.jpg; sourceTree = "<group>"; };
@@ -108,8 +112,16 @@
 			children = (
 				9B9690201F945A900071A785 /* LaunchScreenTableViewController.swift */,
 				9B88ADEF1F99C0C500B73F81 /* RippleTableViewController.swift */,
+				9B46A98D1F99C256006A6E93 /* RipplePracticeViewController.swift */,
 			);
 			name = V2;
+			sourceTree = "<group>";
+		};
+		9B88ADF11F99C1B100B73F81 /* Supplements */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Supplements;
 			sourceTree = "<group>";
 		};
 		9BB03C3D1E23994A00BDA47C = {
@@ -135,6 +147,7 @@
 		9BB03C481E23994B00BDA47C /* Current */ = {
 			isa = PBXGroup;
 			children = (
+				9B88ADF11F99C1B100B73F81 /* Supplements */,
 				9BC4521E1F0A1BAD0026333C /* Images */,
 				9BC4521D1F0A1B810026333C /* View Controllers */,
 				9BB03C4D1E23994B00BDA47C /* Main.storyboard */,
@@ -177,6 +190,7 @@
 		9BC4521E1F0A1BAD0026333C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9B46A98F1F99C8BD006A6E93 /* CircleTransparentBackground.png */,
 				9B9690241F970A500071A785 /* CurrentC.png */,
 				9B8C99631E5BE776007D142C /* rsz_sonarping.jpg */,
 				9B8C99611E5BE580007D142C /* sonarPing.jpeg */,
@@ -294,6 +308,7 @@
 				9BB03C571E23994B00BDA47C /* LaunchScreen.storyboard in Resources */,
 				9B9690251F970A500071A785 /* CurrentC.png in Resources */,
 				9BB03C541E23994B00BDA47C /* Assets.xcassets in Resources */,
+				9B46A9901F99C8BD006A6E93 /* CircleTransparentBackground.png in Resources */,
 				9BB03C4F1E23994B00BDA47C /* Main.storyboard in Resources */,
 				9B8C99621E5BE580007D142C /* sonarPing.jpeg in Resources */,
 				9B8C99641E5BE776007D142C /* rsz_sonarping.jpg in Resources */,
@@ -329,6 +344,7 @@
 				9B88ADF01F99C0C500B73F81 /* RippleTableViewController.swift in Sources */,
 				9BC452161F05F7A10026333C /* CreateProfileTableViewController.swift in Sources */,
 				9BC452181F05FB150026333C /* TextTableViewCell.swift in Sources */,
+				9B46A98E1F99C256006A6E93 /* RipplePracticeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

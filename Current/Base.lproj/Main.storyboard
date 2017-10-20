@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="N5x-fr-HXp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aal-jd-FiE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -137,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zth-kF-Hli" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="845.60000000000002" y="-1340.7796101949027"/>
+            <point key="canvasLocation" x="-1207" y="11"/>
         </scene>
         <!--LaunchScreen-->
         <scene sceneID="qL1-R5-yLh">
@@ -165,7 +165,76 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dmD-Va-EQs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1737" y="-944"/>
+            <point key="canvasLocation" x="2002" y="-1385"/>
+        </scene>
+        <!--RipplePractice-->
+        <scene sceneID="49l-Tl-NTP">
+            <objects>
+                <viewController title="RipplePractice" id="aal-jd-FiE" customClass="RipplePracticeViewController" customModule="Current" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LNc-z1-zqG"/>
+                        <viewControllerLayoutGuide type="bottom" id="yZP-Ul-Vne"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="82y-9M-4BN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7g-Cc-ZMX">
+                                <rect key="frame" x="107" y="258" width="150" height="150"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Aqh-z7-KGJ"/>
+                                    <constraint firstAttribute="width" constant="150" id="oi8-vt-qJf"/>
+                                </constraints>
+                                <state key="normal" title="RIPPLE" image="CurrentC.png"/>
+                                <connections>
+                                    <action selector="ripple:" destination="aal-jd-FiE" eventType="touchUpInside" id="Glo-qr-rkZ"/>
+                                    <outletCollection property="gestureRecognizers" destination="BeU-P7-QF8" appends="YES" id="yXg-7M-fKo"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CircleTransparentBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="ge1-0z-cj7">
+                                <rect key="frame" x="57" y="208" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="OIY-Zf-Srk"/>
+                                    <constraint firstAttribute="width" constant="250" id="hfc-9U-hUf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTS-br-Jic">
+                                <rect key="frame" x="121" y="123" width="178" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="chi-2m-8Zj"/>
+                                    <constraint firstAttribute="width" constant="200" id="h03-8Y-kNX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ge1-0z-cj7" firstAttribute="centerY" secondItem="82y-9M-4BN" secondAttribute="centerY" id="H6G-eE-WWh"/>
+                            <constraint firstItem="ge1-0z-cj7" firstAttribute="top" secondItem="bTS-br-Jic" secondAttribute="bottom" constant="42.5" id="M7m-PV-wLt"/>
+                            <constraint firstAttribute="trailing" secondItem="bTS-br-Jic" secondAttribute="trailing" constant="172" id="cUb-BD-0R7"/>
+                            <constraint firstItem="ge1-0z-cj7" firstAttribute="centerX" secondItem="82y-9M-4BN" secondAttribute="centerX" id="cYA-WR-NAN"/>
+                            <constraint firstItem="B7g-Cc-ZMX" firstAttribute="centerY" secondItem="ge1-0z-cj7" secondAttribute="centerY" id="qCL-wA-GVf"/>
+                            <constraint firstItem="ge1-0z-cj7" firstAttribute="centerY" secondItem="82y-9M-4BN" secondAttribute="centerY" id="v4x-76-CNm"/>
+                            <constraint firstItem="B7g-Cc-ZMX" firstAttribute="centerX" secondItem="ge1-0z-cj7" secondAttribute="centerX" id="wVu-Y7-c76"/>
+                            <constraint firstAttribute="trailing" secondItem="ge1-0z-cj7" secondAttribute="trailing" constant="68" id="wa2-bA-uW3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="circleImageView" destination="ge1-0z-cj7" id="8RD-6W-RSk"/>
+                        <outlet property="rangeLabel" destination="bTS-br-Jic" id="rVu-4s-1H2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tqj-Kx-bLh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="BeU-P7-QF8">
+                    <connections>
+                        <action selector="changeRange:" destination="aal-jd-FiE" id="Tzl-PB-ybu"/>
+                    </connections>
+                </pinchGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2818.4000000000001" y="-1387.5562218890557"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="SMy-Q6-xFs">
@@ -193,7 +262,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Wr-IU-dYB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2690" y="-1452"/>
+            <point key="canvasLocation" x="3697" y="-1387"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tdy-S9-2Zo">
@@ -209,7 +278,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1cr-kS-5jb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2681" y="-712"/>
+            <point key="canvasLocation" x="2433" y="1126"/>
         </scene>
         <!--Create Profile-->
         <scene sceneID="pKN-fH-X7j">
@@ -249,7 +318,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bfh-e0-NRr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4024.8000000000002" y="-1009.7451274362819"/>
+            <point key="canvasLocation" x="3271" y="1162"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="wdb-Y8-hLX">
@@ -425,5 +494,26 @@
             </objects>
             <point key="canvasLocation" x="2542" y="-2859"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="7jK-Av-fnl">
+            <objects>
+                <viewController id="GB0-g4-d8C" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Oxq-f6-304"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jvs-yf-roD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8nO-c2-Ief">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lsv-q6-Iuy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
+    <resources>
+        <image name="CircleTransparentBackground.png" width="1600" height="1600"/>
+        <image name="CurrentC.png" width="600" height="600"/>
+    </resources>
 </document>
