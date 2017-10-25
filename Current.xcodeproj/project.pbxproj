@@ -96,6 +96,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B46A9911F9B061B006A6E93 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		9B88ADED1F99C04000B73F81 /* V1 */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +154,7 @@
 		9BB03C481E23994B00BDA47C /* Current */ = {
 			isa = PBXGroup;
 			children = (
+				9B46A9911F9B061B006A6E93 /* Classes */,
 				9B88ADF11F99C1B100B73F81 /* Supplements */,
 				9BC4521E1F0A1BAD0026333C /* Images */,
 				9BC4521D1F0A1B810026333C /* View Controllers */,

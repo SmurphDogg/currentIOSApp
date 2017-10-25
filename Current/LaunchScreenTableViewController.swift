@@ -21,12 +21,37 @@ class LaunchScreenTableViewController: UITableViewController { //Eventually we n
     override func viewDidLoad() {
         super.viewDidLoad()
 
+      /*
+        
+        //navigation bar
+        let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenwidth, height: 44))
+        self.view.addSubview(navBar);
+        let navItem = UINavigationItem(title: "SomeTitle");
+        let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: nil, action: #selector(getter: UIAccessibilityCustomAction.selector));
+        navItem.rightBarButtonItem = doneItem;
+        navBar.setItems([navItem], animated: false);
+        
+        
+        
+        
+        let btn1 = UIButton(type: .custom)
+        btn1.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+       // btn1.addTarget(self, action: #selector("prepare"), for: .touchUpInside)
+        let item1 = UIBarButtonItem(customView: btn1)
+        
+        let btn2 = UIButton(type: .custom)
+        btn2.setImage(UIImage(named: "imagename"), for: .normal)
+        btn2.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+      //  btn2.addTarget(self, action: #selector("prepare"), for: .touchUpInside)
+        let item2 = UIBarButtonItem(customView: btn2)
+        
+        self.navigationItem.setRightBarButtonItems([item1,item2], animated: true)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
+    */}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -72,7 +97,8 @@ class LaunchScreenTableViewController: UITableViewController { //Eventually we n
             //create image
             myImage = createImage(imageName: cellContent[1] + ".png")
             myImageView = UIImageView(image: myImage)
-            myImageView.frame = CGRect(x: 100, y: 0, width: 300, height: 200)
+            myImageView.frame = CGRect(x: 80, y: 0, width: 300, height: 200)
+            
             cell.addSubview(myImageView)
             break
         case 2:
@@ -98,15 +124,15 @@ class LaunchScreenTableViewController: UITableViewController { //Eventually we n
             cell.addSubview(myView)
             break
         case 5:
-            myButton = createButton(myText: cellContent[5], font: "Avenir", fontSize: 18, x: 0, y: 0, width: 100, height: 50)
+            myButton = createButton(myText: cellContent[5], font: "Avenir", fontSize: 18, x: 0, y: 0, width: 200, height: 50)
             myButton.setTitleColor(UIColor.black, for: .normal)
-            myButton.addTarget(self, action: #selector(rippleForUsers), for: .touchUpInside)
+            myButton.addTarget(self, action: #selector(createProfile), for: .touchUpInside)
             cell.addSubview(myButton)
             
             break
         case 6:
             //create label
-            myLabel = createLabel(stringName: cellContent[6], x: 10, y: 0, width: 200, height: 50)
+            myLabel = createLabel(stringName: cellContent[6], x: 0, y: 0, width: 200, height: 50)
             usersLabel = myLabel
             myLabel.isHidden = true
             cell.addSubview(myLabel)
@@ -202,15 +228,17 @@ class LaunchScreenTableViewController: UITableViewController { //Eventually we n
      }
      */
     
-    /*
+    
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destinationViewController.
      // Pass the selected object to the new view controller.
-     }
-     */
+    
+    
+    }
+ 
 
     
     
@@ -298,5 +326,8 @@ class LaunchScreenTableViewController: UITableViewController { //Eventually we n
         return mySwitch
     }
     
+    func createProfile(){
+        //prepare(for: <#T##UIStoryboardSegue#>, sender: <#T##Any?#>)
+    }
   
 }

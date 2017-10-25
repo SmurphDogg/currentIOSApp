@@ -13,7 +13,13 @@ class RipplePracticeViewController: UIViewController {
     
     @IBOutlet weak var circleImageView: UIImageView!
     var lastSize = 250.0
-   /*
+    var yardStrata = 100
+    @IBOutlet weak var segment: UISegmentedControl!
+    
+    //  var users: [user]()
+    // var hooks : [hook]()
+    //var usersAndHooks : [user,hook]()
+    /*
     @IBAction func changeRange(_ gestureRecognizer : UIPinchGestureRecognizer) {
         // Move the anchor point of the view's layer to the touch point
         // so that scaling the view and layer becomes simpler.
@@ -29,26 +35,73 @@ class RipplePracticeViewController: UIViewController {
         }
     */
     @IBAction func changeRange(_ gestureRecognizer : UIPinchGestureRecognizer) {
-        var range = 100.0
+      var range = gestureRecognizer.scale
         
-        // Scale the view by the current scale factor.
-        if gestureRecognizer.state == .began || gestureRecognizer.state == .changed {
-          let myFloat = Double(gestureRecognizer.scale)
-            range = range + myFloat
-                    // Set the scale factor to 1.0 to avoid exponential growth
-            
-           // image.frame = CGRect(x: 0, y: 0, width: 50, height: screenSize.height * 0.2)
-            lastSize = lastSize * range
-            circleImageView.frame = CGRect(x: 0, y: 0, width: lastSize, height: lastSize)
-            print(lastSize)
-            gestureRecognizer.scale = 1.0
+        if(range > 2.18){
+         range = 2.18
         }
         
+        
+        if(range < 0.422){
+            range = 0.422
+        }
+       
+        
+        circleImageView.transform = CGAffineTransform(scaleX: range, y: range)
+        
+      
+        
+        //if .422-.7736, .7737-1.1253,.1.254-1.4768,1.4769-1.8285,1.8286-2.19
+        
+        if(range >= 0.422 && range <= 0.7736)
+        {
+            yardStrata = 100
+        }
+        
+        if(range >= 0.7737 && range <= 1.1253)
+        {
+            yardStrata = 200
+        }
+        
+        if(range >= 1.1254 && range <= 1.4768)
+        {
+            yardStrata = 300
+        }
+        
+        if(range >= 1.4769 && range <= 1.8285)
+        {
+            yardStrata = 400
+        }
+        
+        if(range >= 1.8286 && range <= 2.18)
+        {
+            yardStrata = 500
+        }
+          rangeLabel.text = String(describing: yardStrata)
     }
+    
     
     @IBAction func ripple(_ sender: Any) {
         rangeLabel.text = "You done rippled"
-        print(lastSize)
+      //  show ripple effect
+        //send yardStrata fetchUsersAndHooks
+        
+        switch segment.selectedSegmentIndex {
+        case 0:
+            /* var users =*/ fetchUsers(range: yardStrata)
+            break
+        case 1:
+            /*var hooks = */fetchHooks(range: yardStrata)
+            break
+        case 2:
+            /*var usersAndHooks =*/ fetchUsersAndHooks(range: yardStrata)
+            break
+            
+        default:
+            
+            break
+        }
+      /*  fetchUsersAndHooks(yardStrata)*/
     }
     
     override func viewDidLoad() {
@@ -62,7 +115,27 @@ class RipplePracticeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func fetchUsersAndHooks(range : Int){
+        //get the number of users near you
+        // users.count
+        let numberOfUsers = 20
+        
+        //hooks.count
+        let numberOfHooks = 12
+        rangeLabel.text = "There are " + String(numberOfUsers) + " Users and " + String(numberOfHooks) + " Hooks around you."
+    }
+    
+    func fetchUsers(range : Int){
+        let numberOfUsers = 20
+    
+        rangeLabel.text = "There are " + String(numberOfUsers) + " Users around you."
+    }
+    
+    func fetchHooks(range : Int){
+        //hooks.count
+        let numberOfHooks = 12
+        rangeLabel.text = "There are " + String(numberOfHooks) + " Hooks around you."
+    }
     /*
     // MARK: - Navigation
 
