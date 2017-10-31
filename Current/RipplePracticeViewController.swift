@@ -106,10 +106,24 @@ class RipplePracticeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        let screenSize: CGRect = UIScreen.main.bounds
+        let navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: 90))
+        let navItem = UINavigationItem(title: "Back")
+        let doneItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(back))
+        navItem.leftBarButtonItem = doneItem
+        navBar.setItems([navItem], animated: false)
+        self.view.addSubview(navBar)
+        
+        //navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(back))
         // Do any additional setup after loading the view.
     }
 
+     @objc func back(){
+        let l = LaunchScreenTableViewController()
+    present(l, animated: true, completion: nil)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

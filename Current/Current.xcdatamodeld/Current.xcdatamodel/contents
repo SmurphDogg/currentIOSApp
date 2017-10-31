@@ -2,6 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13241" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Hook" representedClassName="Hook" syncable="YES" codeGenerationType="class">
         <attribute name="expirationDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="numberOfMembers" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -12,6 +13,11 @@
     <entity name="Interest" representedClassName="Interest" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Location" representedClassName="Location" syncable="YES" codeGenerationType="class">
+        <attribute name="latitutde" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="event" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Hook" syncable="YES"/>
+    </entity>
     <entity name="LoggedIn" representedClassName="LoggedIn" syncable="YES" codeGenerationType="class">
         <attribute name="isLoggedIn" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
     </entity>
@@ -19,20 +25,21 @@
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="gender" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="interests" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="location" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="profilePic" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="visibility" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="committedHooks" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Hook" inverseName="committedUsers" inverseEntity="Hook" syncable="YES"/>
+        <relationship name="interests" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Interest" syncable="YES"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" syncable="YES"/>
         <relationship name="myHooks" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Hook" inverseName="myUser" inverseEntity="Hook" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Hook" positionX="25" positionY="59" width="128" height="148"/>
+        <element name="Hook" positionX="25" positionY="59" width="128" height="163"/>
+        <element name="Interest" positionX="-306" positionY="228" width="128" height="60"/>
+        <element name="Location" positionX="-153" positionY="72" width="128" height="90"/>
         <element name="LoggedIn" positionX="54" positionY="-108" width="128" height="60"/>
         <element name="User" positionX="-380" positionY="-99" width="128" height="223"/>
-        <element name="Interest" positionX="-119" positionY="-297" width="128" height="60"/>
     </elements>
 </model>

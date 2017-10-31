@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LaunchScreenTableViewController: UITableViewController { //Eventually we need to change to a view controller with a nested table view or size classes or something
 
@@ -21,6 +22,16 @@ class LaunchScreenTableViewController: UITableViewController { //Eventually we n
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        /*
+        let reference = Firebase.Database.database().reference(fromURL: "https://current-79dd0.firebaseio.com/")
+        reference.updateChildValues(["someValue" : 123123])
+        
+        Firebase.Auth.auth()
+         */
+
+        
+        //let d =
+      //var d =
       /*
         
         //navigation bar
@@ -244,7 +255,7 @@ class LaunchScreenTableViewController: UITableViewController { //Eventually we n
     
     
     //Check how many users are near this device(~)
-    func rippleForUsers() -> Int{
+    @objc func rippleForUsers() -> Int{
         print("Button pressed")
         var numberOfUsers : Int = -1
         
@@ -326,7 +337,7 @@ class LaunchScreenTableViewController: UITableViewController { //Eventually we n
         return mySwitch
     }
     
-    func createProfile(){
+    @objc func createProfile(){
         //prepare(for: <#T##UIStoryboardSegue#>, sender: <#T##Any?#>)
     }
   
