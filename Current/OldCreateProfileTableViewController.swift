@@ -16,7 +16,7 @@ struct cellData{
 }
 
 
-class CreateProfileTableViewController: UITableViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class OldCreateProfileTableViewController: UITableViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
   
     var tableCellDataArray = [cellData]()

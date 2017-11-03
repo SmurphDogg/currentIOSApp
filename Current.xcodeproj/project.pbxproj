@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1133BA26DF251787F2F2724F /* Pods_CurrentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20253A79DD6F797BD5CDEA36 /* Pods_CurrentTests.framework */; };
 		82DACFC8289D6C69D4BB3F9D /* Pods_Current.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96277F01F8F270AD17065E3 /* Pods_Current.framework */; };
+		8B552ADE1FABAF500072416B /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B552ADD1FABAF500072416B /* CreateProfileViewController.swift */; };
+		8B552AE01FABB2350072416B /* LabelTextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B552ADF1FABB2350072416B /* LabelTextFieldTableViewCell.swift */; };
 		9B46A98E1F99C256006A6E93 /* RipplePracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B46A98D1F99C256006A6E93 /* RipplePracticeViewController.swift */; };
 		9B46A9901F99C8BD006A6E93 /* CircleTransparentBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B46A98F1F99C8BD006A6E93 /* CircleTransparentBackground.png */; };
 		9B66FE841FA587F700CF33B3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B66FE831FA587F700CF33B3 /* GoogleService-Info.plist */; };
@@ -23,7 +25,7 @@
 		9BB03C571E23994B00BDA47C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BB03C551E23994B00BDA47C /* LaunchScreen.storyboard */; };
 		9BB03C621E23994C00BDA47C /* CurrentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB03C611E23994C00BDA47C /* CurrentTests.swift */; };
 		9BB03C6D1E23994C00BDA47C /* CurrentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB03C6C1E23994C00BDA47C /* CurrentUITests.swift */; };
-		9BC452161F05F7A10026333C /* CreateProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC452151F05F7A10026333C /* CreateProfileTableViewController.swift */; };
+		9BC452161F05F7A10026333C /* OldCreateProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC452151F05F7A10026333C /* OldCreateProfileTableViewController.swift */; };
 		9BC452181F05FB150026333C /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC452171F05FB150026333C /* TextTableViewCell.swift */; };
 		9BC4521A1F0651560026333C /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC452191F0651560026333C /* LogInViewController.swift */; };
 		9BC4521C1F087B780026333C /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC4521B1F087B780026333C /* TextFieldTableViewCell.swift */; };
@@ -53,6 +55,8 @@
 		30AB60A9E957A8FBBEAB1E37 /* Pods-CurrentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrentTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CurrentTests/Pods-CurrentTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3CF38D4F0DD571255298210B /* Pods-CurrentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrentUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CurrentUITests/Pods-CurrentUITests.release.xcconfig"; sourceTree = "<group>"; };
 		610C33A82AD582C43A365481 /* Pods-Current.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Current.release.xcconfig"; path = "Pods/Target Support Files/Pods-Current/Pods-Current.release.xcconfig"; sourceTree = "<group>"; };
+		8B552ADD1FABAF500072416B /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
+		8B552ADF1FABB2350072416B /* LabelTextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		90DDB3976949A6211F6048B7 /* Pods_CurrentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurrentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B46A98D1F99C256006A6E93 /* RipplePracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RipplePracticeViewController.swift; sourceTree = "<group>"; };
 		9B46A98F1F99C8BD006A6E93 /* CircleTransparentBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CircleTransparentBackground.png; sourceTree = "<group>"; };
@@ -74,7 +78,7 @@
 		9BB03C681E23994C00BDA47C /* CurrentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurrentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BB03C6C1E23994C00BDA47C /* CurrentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUITests.swift; sourceTree = "<group>"; };
 		9BB03C6E1E23994C00BDA47C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9BC452151F05F7A10026333C /* CreateProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProfileTableViewController.swift; sourceTree = "<group>"; };
+		9BC452151F05F7A10026333C /* OldCreateProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldCreateProfileTableViewController.swift; sourceTree = "<group>"; };
 		9BC452171F05FB150026333C /* TextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		9BC452191F0651560026333C /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogInViewController.swift; path = ../LogInViewController.swift; sourceTree = "<group>"; };
 		9BC4521B1F087B780026333C /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 		9B46A9911F9B061B006A6E93 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8B552ADF1FABB2350072416B /* LabelTextFieldTableViewCell.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -124,7 +129,7 @@
 				9BC452191F0651560026333C /* LogInViewController.swift */,
 				9BC4521B1F087B780026333C /* TextFieldTableViewCell.swift */,
 				9BC452171F05FB150026333C /* TextTableViewCell.swift */,
-				9BC452151F05F7A10026333C /* CreateProfileTableViewController.swift */,
+				9BC452151F05F7A10026333C /* OldCreateProfileTableViewController.swift */,
 			);
 			name = V1;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 				9B88ADEF1F99C0C500B73F81 /* RippleTableViewController.swift */,
 				9B46A98D1F99C256006A6E93 /* RipplePracticeViewController.swift */,
 				9B66FE851FA6309400CF33B3 /* RegisterUserViewController.swift */,
+				8B552ADD1FABAF500072416B /* CreateProfileViewController.swift */,
 			);
 			name = V2;
 			sourceTree = "<group>";
@@ -564,11 +570,13 @@
 				9B66FE861FA6309400CF33B3 /* RegisterUserViewController.swift in Sources */,
 				9BB03C4A1E23994B00BDA47C /* AppDelegate.swift in Sources */,
 				9BC4521C1F087B780026333C /* TextFieldTableViewCell.swift in Sources */,
+				8B552ADE1FABAF500072416B /* CreateProfileViewController.swift in Sources */,
 				9BC4521A1F0651560026333C /* LogInViewController.swift in Sources */,
 				9BB03C521E23994B00BDA47C /* Current.xcdatamodeld in Sources */,
 				9B9690211F945A900071A785 /* LaunchScreenTableViewController.swift in Sources */,
 				9B88ADF01F99C0C500B73F81 /* RippleTableViewController.swift in Sources */,
-				9BC452161F05F7A10026333C /* CreateProfileTableViewController.swift in Sources */,
+				8B552AE01FABB2350072416B /* LabelTextFieldTableViewCell.swift in Sources */,
+				9BC452161F05F7A10026333C /* OldCreateProfileTableViewController.swift in Sources */,
 				9BC452181F05FB150026333C /* TextTableViewCell.swift in Sources */,
 				9B46A98E1F99C256006A6E93 /* RipplePracticeViewController.swift in Sources */,
 			);
