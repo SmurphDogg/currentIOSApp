@@ -18,11 +18,6 @@ class CreateProfileViewController: UIViewController, UITableViewDelegate, UITabl
         createProfileTableView.separatorStyle = .none
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 6
@@ -34,6 +29,8 @@ class CreateProfileViewController: UIViewController, UITableViewDelegate, UITabl
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = createProfileTableView.dequeueReusableCell(withIdentifier: "createProfileCell", for: indexPath)
+        
+        
         
         return cell
     }
