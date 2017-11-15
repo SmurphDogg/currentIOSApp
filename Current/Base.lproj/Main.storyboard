@@ -115,7 +115,7 @@
                                 <state key="normal" title="Forgot Password"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgY-7l-S67">
-                                <rect key="frame" x="12" y="220" width="123" height="30"/>
+                                <rect key="frame" x="16" y="433" width="123" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Remain Logged in"/>
                             </button>
