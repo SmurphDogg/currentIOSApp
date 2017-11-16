@@ -639,7 +639,7 @@
                                         <textInputTraits key="textInputTraits" spellCheckingType="no" textContentType="username"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAD-1e-f6s">
-                                        <rect key="frame" x="20" y="441" width="335" height="50"/>
+                                        <rect key="frame" x="20" y="515" width="335" height="50"/>
                                         <color key="backgroundColor" red="0.56238975700000005" green="0.72953865819999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="ozL-pe-nbX"/>
@@ -667,44 +667,62 @@
                                         <rect key="frame" x="20" y="315" width="335" height="22"/>
                                         <color key="textColor" red="0.68172985409999998" green="0.68172985409999998" blue="0.68172985409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" spellCheckingType="no" textContentType="email"/>
+                                        <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WxZ-3f-yXe">
-                                        <rect key="frame" x="20" y="352" width="335" height="22"/>
+                                        <rect key="frame" x="20" y="426" width="335" height="22"/>
                                         <color key="textColor" red="0.68172985409999998" green="0.68172985409999998" blue="0.68172985409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a4T-we-LTR">
-                                        <rect key="frame" x="20" y="389" width="335" height="22"/>
+                                        <rect key="frame" x="20" y="463" width="335" height="22"/>
                                         <color key="textColor" red="0.68172985409999998" green="0.68172985409999998" blue="0.68172985409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Firstname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ptl-Ku-16Z">
+                                        <rect key="frame" x="20" y="352" width="335" height="22"/>
+                                        <color key="textColor" red="0.68172985409999998" green="0.68172985409999998" blue="0.68172985409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" spellCheckingType="no" smartDashesType="no" smartQuotesType="no" textContentType="name"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Lastname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e7f-pk-mPn">
+                                        <rect key="frame" x="20" y="389" width="335" height="22"/>
+                                        <color key="textColor" red="0.68172985409999998" green="0.68172985409999998" blue="0.68172985409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" spellCheckingType="no" smartDashesType="no" smartQuotesType="no" textContentType="name"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Dba-m8-dyq" firstAttribute="trailing" secondItem="Lyi-iG-tgy" secondAttribute="trailing" id="9le-sr-Abc"/>
+                                    <constraint firstItem="ptl-Ku-16Z" firstAttribute="top" secondItem="Dba-m8-dyq" secondAttribute="bottom" constant="15" id="C6z-H5-Q9T"/>
                                     <constraint firstItem="a4T-we-LTR" firstAttribute="top" secondItem="WxZ-3f-yXe" secondAttribute="bottom" constant="15" id="DGx-1s-a9H"/>
                                     <constraint firstItem="wnY-O7-Jc9" firstAttribute="top" secondItem="hBC-ds-foR" secondAttribute="top" constant="10" id="EbI-xw-eZK"/>
+                                    <constraint firstAttribute="bottom" secondItem="CAD-1e-f6s" secondAttribute="bottom" constant="82" id="Ekr-oJ-5AF"/>
                                     <constraint firstItem="Lyi-iG-tgy" firstAttribute="leading" secondItem="hBC-ds-foR" secondAttribute="leading" constant="20" id="GdA-qx-KaL"/>
                                     <constraint firstAttribute="trailing" secondItem="6ZW-4h-SVK" secondAttribute="trailing" constant="50" id="GtJ-Ah-INr"/>
                                     <constraint firstItem="6ZW-4h-SVK" firstAttribute="centerX" secondItem="hBC-ds-foR" secondAttribute="centerX" id="HYR-gL-aqt"/>
                                     <constraint firstItem="Dba-m8-dyq" firstAttribute="top" secondItem="Lyi-iG-tgy" secondAttribute="bottom" constant="15" id="MYD-yz-8np"/>
-                                    <constraint firstItem="WxZ-3f-yXe" firstAttribute="trailing" secondItem="Dba-m8-dyq" secondAttribute="trailing" id="MjV-Zo-y3W"/>
+                                    <constraint firstItem="WxZ-3f-yXe" firstAttribute="leading" secondItem="e7f-pk-mPn" secondAttribute="leading" id="N4G-OJ-5rj"/>
                                     <constraint firstItem="a4T-we-LTR" firstAttribute="trailing" secondItem="WxZ-3f-yXe" secondAttribute="trailing" id="TTY-lR-4y9"/>
                                     <constraint firstItem="CAD-1e-f6s" firstAttribute="leading" secondItem="a4T-we-LTR" secondAttribute="leading" id="Tbq-e3-F0d"/>
-                                    <constraint firstItem="WxZ-3f-yXe" firstAttribute="leading" secondItem="Dba-m8-dyq" secondAttribute="leading" id="WhN-eW-r21"/>
+                                    <constraint firstItem="e7f-pk-mPn" firstAttribute="top" secondItem="ptl-Ku-16Z" secondAttribute="bottom" constant="15" id="UW7-un-UAp"/>
                                     <constraint firstItem="wnY-O7-Jc9" firstAttribute="centerX" secondItem="hBC-ds-foR" secondAttribute="centerX" id="XlR-lm-cGa"/>
                                     <constraint firstItem="Dba-m8-dyq" firstAttribute="leading" secondItem="Lyi-iG-tgy" secondAttribute="leading" id="YMx-rV-vna"/>
                                     <constraint firstItem="CAD-1e-f6s" firstAttribute="trailing" secondItem="a4T-we-LTR" secondAttribute="trailing" id="aR6-W8-xMi"/>
                                     <constraint firstAttribute="trailing" secondItem="Lyi-iG-tgy" secondAttribute="trailing" constant="20" id="eFr-OX-cpR"/>
+                                    <constraint firstItem="WxZ-3f-yXe" firstAttribute="top" secondItem="e7f-pk-mPn" secondAttribute="bottom" constant="15" id="eZa-Uc-dgJ"/>
+                                    <constraint firstItem="ptl-Ku-16Z" firstAttribute="trailing" secondItem="Dba-m8-dyq" secondAttribute="trailing" id="eoS-o6-Ees"/>
+                                    <constraint firstItem="e7f-pk-mPn" firstAttribute="leading" secondItem="ptl-Ku-16Z" secondAttribute="leading" id="fOt-D8-ZLc"/>
                                     <constraint firstItem="6ZW-4h-SVK" firstAttribute="leading" secondItem="hBC-ds-foR" secondAttribute="leading" constant="50" id="fnV-30-hGt"/>
+                                    <constraint firstItem="e7f-pk-mPn" firstAttribute="trailing" secondItem="ptl-Ku-16Z" secondAttribute="trailing" id="h9q-4a-GiI"/>
+                                    <constraint firstItem="WxZ-3f-yXe" firstAttribute="trailing" secondItem="e7f-pk-mPn" secondAttribute="trailing" id="hSl-eW-y3S"/>
                                     <constraint firstItem="CAD-1e-f6s" firstAttribute="top" secondItem="a4T-we-LTR" secondAttribute="bottom" constant="30" id="hzK-HN-CIf"/>
                                     <constraint firstItem="6ZW-4h-SVK" firstAttribute="top" secondItem="wnY-O7-Jc9" secondAttribute="bottom" constant="20" id="m1k-Me-GWl"/>
-                                    <constraint firstItem="WxZ-3f-yXe" firstAttribute="top" secondItem="Dba-m8-dyq" secondAttribute="bottom" constant="15" id="sl6-7Y-HdI"/>
-                                    <constraint firstAttribute="bottom" secondItem="CAD-1e-f6s" secondAttribute="bottom" constant="104" id="tOP-Z5-bXu"/>
                                     <constraint firstItem="Lyi-iG-tgy" firstAttribute="top" secondItem="6ZW-4h-SVK" secondAttribute="bottom" constant="20" id="uFZ-B5-nl0"/>
+                                    <constraint firstItem="ptl-Ku-16Z" firstAttribute="leading" secondItem="Dba-m8-dyq" secondAttribute="leading" id="xuA-PG-SlM"/>
                                     <constraint firstItem="a4T-we-LTR" firstAttribute="leading" secondItem="WxZ-3f-yXe" secondAttribute="leading" id="yoX-gM-5fz"/>
                                 </constraints>
                             </scrollView>
